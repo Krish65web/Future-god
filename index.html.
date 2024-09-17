@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #countdown {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #share-instruction {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: red;
+        }
+        #result {
+            display: none;
+            margin-top: 30px;
+        }
+        .result-box {
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+        }
+        #share-btn {
+            margin-top: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 5px;
+        }
+        #share-btn:hover {
+            background-color: #1EBE55;
+        }
+        .animation {
+            display: none;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Your Future</h1>
+        <form id="prediction-form">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="date" id="dob" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        <div class="animation" id="praise-wait-animation">Please wait... Your future is being revealed!</div>
+
+        <div id="countdown">15</div>
+
+        <div id="share-instruction">
+            <p>To see your future, please share this on <strong>5 WhatsApp groups</strong> first!</p>
+            <button id="share-btn">Share on WhatsApp</button>
+            <p id="share-count">You have shared to 0/5 groups.</p>
+        </div>
+
+        <div id="result" class="result-box">
+            <h3>Your Future Prediction</h3>
+            <p id="prediction-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body></html>
